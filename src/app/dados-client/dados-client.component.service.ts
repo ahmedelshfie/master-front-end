@@ -16,7 +16,7 @@ export class UserService {
 
   constructor(private http:HttpClient) {}
 
-	private PATH = '/api';
+	private PATH = '/dadosClient';
 
     public carregardadosClient(): Observable<any> {
         let retornoObserver;
