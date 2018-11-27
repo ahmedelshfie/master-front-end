@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { DadosService } from './dados-client.component.service';
-import { DadosDTO } from './dados./dadosdto';
+import { DadosClientService } from './dados-client.component.service';
+import { ClientDTO } from './../dto/ClientDTO';
 
 @Component({
   selector: 'app-dados-client',
@@ -13,13 +12,13 @@ export class DadosClientComponent implements OnInit {
 
   constructor(
     private router: Router, 
-    private dadosService: DadosService, 
-    private dadosdto: DadosDTO
+    private dadosService: DadosClientService, 
+    private clientsdto: ClientDTO
     ) { }
 
   ngOnInit() {
-    this.dadosService.carregardadosClient().subscribe((retorno: DadosDTO) => {
-      this.dadosdto = retorno;
+    this.dadosService.carregardadosClient().subscribe((retorno: ClientDTO) => {
+      this.clientsdto = retorno;
       console.log("dadosClient-dto", retorno);
     });
   }

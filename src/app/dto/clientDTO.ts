@@ -1,4 +1,4 @@
-import {clientVO} from './dados-client/clientVO'
+import {clientVO} from './../dto/clientVO';
 ;
 export interface DadosDTO {
 
