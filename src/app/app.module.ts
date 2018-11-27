@@ -9,7 +9,7 @@ import {DadosClientService} from './dados-client/dados-client.component.service'
   declarations: [
     AppComponent,
     DadosClientComponent,
-    DadosService
+    DadosClientService
   ],
   imports: [
     BrowserModule

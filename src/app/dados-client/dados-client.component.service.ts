@@ -18,9 +18,10 @@ export class UserService {
 
 	private PATH = '/dadosClient';
 
-    public carregardadosClient(): Observable<any> {
+    public buscarDadosClient(): Observable<any> {
         let retornoObserver;
         let retorno = new Observable(observer => (retornoObserver = observer));
+        let params = new HttpParams().set("client", idClient);
         this.http.get, this.PATH.subscribe(data => {
             if (retornoObserver) {
               retornoObserver.next(data);
