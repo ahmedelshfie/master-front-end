@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { DadosService } from './dados.service';
+import { DadosService } from './dados-client.component.service';
 import { DadosDTO } from './dados./dadosdto';
 
 @Component({
